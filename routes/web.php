@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+
+Route::group([ 'as' => 'Front.' ] , function (){
+    Route::get('/' , [\App\Http\Controllers\FrontController::class , 'index'])->name('index');
+    Route::get('About' , [\App\Http\Controllers\FrontController::class , 'About'])->name('About');
+    Route::get('Contact' , [\App\Http\Controllers\FrontController::class , 'Contact'])->name('Contact');
+
+
 });
