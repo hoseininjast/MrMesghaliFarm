@@ -14,6 +14,11 @@ class FrontController extends Controller
 
     }
 
+    public function Collaboration()
+    {
+
+    }
+
     public function Contact()
     {
 

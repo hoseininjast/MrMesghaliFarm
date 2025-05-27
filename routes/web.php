@@ -20,6 +20,7 @@ Auth::routes();
 Route::group([ 'as' => 'Front.' ] , function (){
     Route::get('/' , [\App\Http\Controllers\FrontController::class , 'index'])->name('index');
     Route::get('About' , [\App\Http\Controllers\FrontController::class , 'About'])->name('About');
+    Route::get('Collaboration' , [\App\Http\Controllers\FrontController::class , 'Collaboration'])->name('Collaboration');
     Route::get('Contact' , [\App\Http\Controllers\FrontController::class , 'Contact'])->name('Contact');
 
 

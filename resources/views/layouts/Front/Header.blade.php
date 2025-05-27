@@ -1,38 +1,68 @@
-<header class="header">
-    <div class="overlay"></div>
-    <!-- Top Header Area Start -->
-    <section class="top-header">
+<div class="navbar-area navbar-style-two">
+    <div class="trifles-responsive-nav">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 navbar-background">
-                    <div class="content">
-                        <div class="left-content">
-                            <img id="NavbarProfileImage" class="rounded-pill" src="{{asset('images/Users/DefaultProfile.png')}}" width="50px">
-                            <span class="NavbarUsername" id="NavbarUsername"></span>
-                        </div>
-                       {{-- <div class="center-content">
-                            <ul class="center-list">
-                                <li>
-                                    <a href="gamer-profile8.html" class="mybtn2 navbarmybtn2" > <i class="mdi mdi-tournament"></i> Order</a>
-                                </li>
-
-                            </ul>
-                        </div>--}}
-                        <div class="right-content">
-                            <ul class="right-list">
-                                <li>
-                                    <div class="d-flex NavbarItem" data-toggle="modal" data-target="#usernotification" >
-                                        <span class="NavbarUsername" id="NavbarCharge"><i class="fa fa-coins text-warning mr-1"></i>0</span>
-                                        <span class="NavbarUsername mytext-blue" ><span class="text-white" id="NavbarKATCharge">0 </span> KAT</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="trifles-responsive-menu">
+                <div class="logo">
+                    <a href="{{route('Front.index')}}">
+                        <img width="60" src="{{asset('images/Logo.png')}}" alt="logo">
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Top Header Area End -->
+    </div>
 
-</header>
+    <div class="trifles-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="{{route('Front.index')}}">
+                    <img width="100" src="{{asset('images/Logo.png')}}" alt="logo">
+                </a>
+
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+
+
+                        <li class="nav-item">
+                            <a href="{{route('Front.index')}}" class="nav-link">
+                                خانه
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('Front.About')}}" class="nav-link">
+                                فروشگاه
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('Front.Collaboration')}}" class="nav-link">
+                                همکاری با ما
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('Front.About')}}" class="nav-link">
+                                درباره ما
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                تماس با ما
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="others-options">
+
+                        <div class="cart-btn">
+                            <a href="cart.html">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
