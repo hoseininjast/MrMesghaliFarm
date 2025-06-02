@@ -11,16 +11,17 @@ class FrontController extends Controller
 
     public function About()
     {
-
+        return view('Front.About');
     }
 
     public function Collaboration()
     {
+        return view('Front.About');
 
     }
 
     public function Contact()
     {
-
+        return view('Front.Contact');
     }
 }

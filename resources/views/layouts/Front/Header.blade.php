@@ -46,7 +46,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
+                            <a href="{{route('Front.Contact')}}" class="nav-link">
                                 تماس با ما
                             </a>
                         </li>
