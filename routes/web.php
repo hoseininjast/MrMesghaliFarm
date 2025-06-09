@@ -33,7 +33,7 @@ Route::group([ 'as' => 'Front.' ] , function (){
 });
 
 
-Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => 'auth' ] , function (){
+Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => ['auth'] ] , function (){
     Route::get('/' , [\App\Http\Controllers\DashboardController::class , 'index'])->name('index');
 
 
