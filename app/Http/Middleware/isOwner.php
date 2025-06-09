@@ -16,7 +16,7 @@ class isOwner
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(\Auth::user()->Role == 'Owner' || \Auth::user()->Role == 'Admin'){
+        if(\Auth::user()->Role == 'Owner' ){
             return $next($request);
         }else{
             return redirect()->route('Front.Panel.index');

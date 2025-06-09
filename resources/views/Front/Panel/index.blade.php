@@ -85,7 +85,7 @@
                                <td class="Panel-table-Description">{{$contract->Description}}</td>
                                <td>{{$contract->Time}} ماه</td>
                                <td>{{$contract->MinProfit}}% - {{$contract->MaxProfit}}%</td>
-                               <td>{{$contract->Status}}</td>
+                               <td>{{$contract->Status == 'Open' ? 'باز' : 'بسته'}}</td>
 
                            </tr>
                        @endforeach

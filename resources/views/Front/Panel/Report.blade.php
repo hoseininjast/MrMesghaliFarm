@@ -24,32 +24,49 @@
 
                <h3>گزارش سرمایه گذاری </h3>
 
-{{--
                <div class="col-12 pt-4">
 
                    <div class="row">
-                       <div class="col-lg-6 col-md-6">
+                       <div class="col-lg-3 col-md-6">
                            <div class="single-contact-box">
                                <i class="fa fa-percentage"></i>
                                <div class="content-title">
-                                   <h3>سود باقی مانده</h3>
-                                   <p>۱۲٪ الی ۱۵٪</p>
+                                   <h3>سود قرارداد </h3>
+                                   <p>{{$Contract->Contract->MinProfit}}٪ الی {{$Contract->Contract->MaxProfit}}٪</p>
                                </div>
                            </div>
                        </div>
-                       <div class="col-lg-6 col-md-6">
+                       <div class="col-lg-3 col-md-6">
                            <div class="single-contact-box">
                                <i class="fa fa-dollar-sign"></i>
                                <div class="content-title">
-                                   <h3>مبلغ حدودی</h3>
-                                   <p>۱۵۰ میلیون  الی ۱۹۰ میلیون </p>
+                                   <h3>مبلغ قرارداد</h3>
+                                   <p>{{$Contract->Amount}} میلیون </p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-lg-3 col-md-6">
+                           <div class="single-contact-box">
+                               <i class="fa fa-dollar-sign"></i>
+                               <div class="content-title">
+                                   <h3>میانگین سود </h3>
+                                   <p>{{$Contract->Amount / 100 * $Contract->Contract->MinProfit}} الی {{$Contract->Amount / 100 * $Contract->Contract->MaxProfit}} میلیون </p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-lg-3 col-md-6">
+                           <div class="single-contact-box">
+                               <i class="fa fa-percentage"></i>
+                               <div class="content-title">
+                                   <h3>میانگین درصد سود</h3>
+                                   <p>{{($Contract->Contract->MinProfit + $Contract->Contract->MaxProfit) / 2}}٪</p>
                                </div>
                            </div>
                        </div>
 
                    </div>
 
-               </div>--}}
+               </div>
 
 
                <div class="col-12 p-4">

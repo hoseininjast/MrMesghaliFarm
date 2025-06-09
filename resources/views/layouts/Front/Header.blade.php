@@ -81,7 +81,7 @@
 
 
                         <div class="cart-btn">
-                            <a href="cart.html">
+                            <a href="#">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span>0</span>
                             </a>
