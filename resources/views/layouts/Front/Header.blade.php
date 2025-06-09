@@ -50,6 +50,11 @@
                                 تماس با ما
                             </a>
                         </li>
+                        <li class="nav-item d-md-none ">
+                            <a href="{{route('Front.Panel.index')}}" class="nav-link">
+                                حساب کاربری من
+                            </a>
+                        </li>
                     </ul>
 
                     <div class="others-options">
