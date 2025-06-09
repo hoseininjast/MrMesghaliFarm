@@ -24,7 +24,7 @@
 
                <h3>گزارش سرمایه گذاری </h3>
 
-
+{{--
                <div class="col-12 pt-4">
 
                    <div class="row">
@@ -49,7 +49,7 @@
 
                    </div>
 
-               </div>
+               </div>--}}
 
 
                <div class="col-12 p-4">

@@ -1,63 +1,72 @@
-@extends('layouts.app')
+@extends('layouts.Front.Master')
 
 @section('content')
 
-<div class="account-pages my-5">
-    <div class="container">
-
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6 col-xl-4">
-                <div class="text-center">
-                    <a href="#">
-                        <img src="{{asset('images/Logo.png')}}" alt="" height="100" class="mx-auto rounded-pill">
-                    </a>
-                    <p class="text-muted mt-2 mb-4">Mr.Mesghali Farm</p>
-
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="page-title-content">
+                        <h2 class="text-darkyellow">ورود</h2>
+                        <ul>
+                            <li><a href="{{route('Front.index')}}">خانه</a></li>
+                            <li>ورود</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-body p-4">
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
 
-                        <div class="text-center mb-4">
-                            <h4 class="text-uppercase mt-0">Sign In</h4>
+
+    <!-- Start Login Area -->
+    <div class="login-section ptb-100">
+        <div class="container">
+            <div class="login-form">
+                <div class="login-title">
+                    <h3>خوش آمدید!</h3>
+                    <p>وارد حساب کاربری خود شوید</p>
+                </div>
+
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="ایمیل خود را وارد کنید">
+                            </div>
                         </div>
 
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email address</label>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Enter your email">
-
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="رمز عبور خود را وارد کنید">
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter your password">
+                        <div class="col-lg-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
+                                <label class="form-check-label" for="remember">مرا بخاطر بسپار</label>
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <div class="col-lg-12">
+                            <div class="send-btn">
 
-                                    <label class="form-check-label" for="checkbox-signin">Remember me</label>
-                                </div>
+                                <button type="submit" class="default-btn">
+                                    ورود
+                                    <span></span>
+                                </button>
                             </div>
-
-                            <div class="mb-3 d-grid text-center">
-                                <button class="btn btn-primary" type="submit"> Log In </button>
-                            </div>
-                        </form>
-
-                    </div> <!-- end card-body -->
-                </div>
-                <!-- end card -->
-
-                <!-- end row -->
-
-            </div> <!-- end col -->
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <!-- end row -->
     </div>
-    <!-- end container -->
-</div>
+    <!-- End Login Area -->
+
 @endsection

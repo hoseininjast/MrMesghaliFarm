@@ -25,10 +25,10 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="single-contact-box">
-                        <i class="fab fa-telegram-plane"></i>
+                        <i class="fa-brands fa-telegram"></i>
                         <div class="content-title">
                             <h3>تلگرام</h3>
-                            <p>@alireza</p>
+                            <a href="https://t.me/alireza888m"><p>@alireza888m</p></a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <i class="fa fa-envelope"></i>
                         <div class="content-title">
                             <h3>ایمیل</h3>
-                            <a href="mailto:hello@trifles.com">info@mrmesghalifarm.ir</a>
+                            <a href="mailto:info@mrmesghalifarm.ir">info@mrmesghalifarm.ir</a>
                         </div>
                     </div>
                 </div>

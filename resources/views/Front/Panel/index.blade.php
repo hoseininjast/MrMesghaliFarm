@@ -7,9 +7,9 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-content">
-                        <h2>پنل کاربری</h2>
+                        <h2 class="text-darkyellow">پنل کاربری</h2>
                         <ul>
-                            <li><a href="index.html">خانه</a></li>
+                            <li><a href="{{route('Front.index')}}">خانه</a></li>
                             <li>پنل کاربری</li>
                         </ul>
                     </div>
@@ -22,7 +22,7 @@
        <div class="container">
            <div class="row">
 
-               <div class="col-12 pt-4">
+               {{--<div class="col-12 pt-4">
 
                    <div class="row">
                        <div class="col-lg-4 col-md-6">
@@ -55,7 +55,7 @@
 
                    </div>
 
-               </div>
+               </div>--}}
 
                <div class="col-12 p-4">
                    <div class="row">

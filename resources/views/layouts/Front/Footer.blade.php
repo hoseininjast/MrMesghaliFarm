@@ -62,17 +62,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                بازگشت و لغو
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
                                 برنامه تحویل
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:08889802047">
-                                تماس بگیرید
                             </a>
                         </li>
                         <li>
@@ -81,7 +71,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="signup.html">
+                            <a href="{{route('Front.Panel.index')}}">
                                 حساب کاربری من
                             </a>
                         </li>
@@ -95,22 +85,17 @@
                         <h3>اطلاعات تماس</h3>
                     </div>
 
-                    <div class="footer-info-contact">
-                        <i class="flaticon-pin"></i>
-                        <h3>موقعیت</h3>
-                        <span>میدان آزادی 9 شرقی آزادراه، <br> ایران ، استان تهران</span>
-                    </div>
 
                     <div class="footer-info-contact">
-                        <i class="flaticon-call"></i>
-                        <h3>تماس با ما</h3>
-                        <span><a href="tel:021-12345678">021-12345678</a></span>
+                        <i class="flaticon-telephone"></i>
+                        <h3>تلگرام ما</h3>
+                        <span><a href="https://t.me/alireza888m">@alireza888m</a></span>
                     </div>
 
                     <div class="footer-info-contact">
                         <i class="flaticon-envelope"></i>
                         <h3>ایمیل ما</h3>
-                        <span><a href="mailto:hello@plamb.com">trifles@site.com</a></span>
+                        <span><a href="mailto:info@mrmesghalifarm.ir">info@mrmesghalifarm.ir</a></span>
                     </div>
                 </div>
             </div>
@@ -118,16 +103,14 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <div class="footer-heading">
-                        <h3>عضویت در سیستم</h3>
+                        <h3>عضویت در خبرنامه</h3>
                     </div>
-                    <p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم 40 سال صنعت بوده است.</p>
-
                     <form class="newsletter-form">
                         <input type="email" class="input-newsletter" placeholder="آدرس ایمیل شما" name="EMAIL" required autocomplete="off">
                         <button type="submit">
                             مشترک شدن
                             <span class="badge-darkyellow">
-                                <i class="flaticon-plus"></i>
+                                <i class="flaticon-plus text-white" ></i>
                             </span>
                         </button>
                         <div id="validator-newsletter" class="form-result"></div>
