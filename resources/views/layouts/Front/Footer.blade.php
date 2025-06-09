@@ -1,4 +1,6 @@
 <section class="footer-section">
+    <img class="footer-image" src="{{asset('images/Front/grass.png')}}" alt="">
+
     <div class="container">
         <div class="row">
 
@@ -124,7 +126,9 @@
                         <input type="email" class="input-newsletter" placeholder="آدرس ایمیل شما" name="EMAIL" required autocomplete="off">
                         <button type="submit">
                             مشترک شدن
-                            <i class="flaticon-plus"></i>
+                            <span class="badge-darkyellow">
+                                <i class="flaticon-plus"></i>
+                            </span>
                         </button>
                         <div id="validator-newsletter" class="form-result"></div>
                     </form>
@@ -161,4 +165,8 @@
             </div>
         </div>
     </div>
+
+    <div class="img-item item-1">
+    </div>
+
 </section>

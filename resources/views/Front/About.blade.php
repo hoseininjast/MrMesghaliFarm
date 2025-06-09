@@ -7,9 +7,9 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-content">
-                        <h2>درباره ما</h2>
+                        <h2 class="text-darkyellow">درباره ما</h2>
                         <ul>
-                            <li><a href="index.html">خانه</a></li>
+                            <li><a href="{{route('Front.index')}}">خانه</a></li>
                             <li>درباره ما</li>
                         </ul>
                     </div>
@@ -24,18 +24,30 @@
         <div class="container">
             <div class="about-title-area">
                 <div class="row">
-                    <div class="col-lg-7 col-md-12">
+                    <div class="col-lg-4 col-md-12">
                         <div class="about-title">
-                            <span>درباره ما</span>
-                            <h2>ما تازه شروع کردیم ولی راهمون مشخصه
+                            <h2>
+                                درباره ما
+
                             </h2>
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-md-12">
+                    <div class="col-lg-8 col-md-12">
                         <div class="about-text">
                             <p>
-                                ما با دام و باغ و تلاش واقعی شروع کردیم. می‌خوایم بهترین محصولات ایران رو زیر یه برند عرضه کنیم. این فقط یه تجارت نیست، یه تعهده به خودمون و مردم.
+
+                                ما باور داریم که هر ایرانی حق داره بهترین و سالم‌ترین مواد غذایی رو مصرف کنه؛ محصولاتی در حد کیفیت صادراتی، اما مخصوص مردم خودمون. مسیر ما از جایی آغاز شد که تصمیم گرفتیم به‌جای رفتن به دنبال سود سریع، روی کیفیت واقعی، سلامت مصرف‌کننده و صداقت در تولید تمرکز کنیم.
+                                <br>
+                                تولید ما با تکیه بر دامداری و کشاورزی پاک آغاز شده—بدون استفاده از ترکیبات مصنوعی، بدون وابستگی به کود یا سم شیمیایی، و بدون بار اضافه‌ای از مواد مداخله‌گر روی سلامت دام یا خاک. ما با دستان خودمون، با تلاش شبانه‌روزی، و با وسواس در هر جزئیات، به تولید طبیعی و ارگانیک متعهد شدیم.
+                                <br>
+                                برای ما، تولید هر بسته گوشت گوسفند، هر شانه تخم‌مرغ رسمی، یا هر قطعه میوه خشک فقط یک محصول نیست؛ یک تعهده. تعهد به کیفیت، سلامت، و اعتمادی که مردم به ما می‌کنن.
+                                <br>
+                                ما اعتقاد داریم که سلامت، از مزرعه شروع می‌شه. انتخاب دقیق خوراک طبیعی، محیط پرورش بهداشتی، احترام به طبیعت و مراقبت واقعی از دام و زمین، همه بخشی از فرآیندیه که به محصولاتی منجر می‌شه که می‌تونی با خیال راحت به خانواده‌ات بدی—محصولاتی که پایه‌های تولید ارگانیک رو رعایت می‌کنن.
+                                <br>
+                                ما فقط دنبال فروش نیستیم. داریم یک برند قابل‌اعتماد می‌سازیم که توش مردم با خیال راحت خرید می‌کنن و سرمایه‌گذارا با اطمینان مشارکت می‌کنن. اینجا، مصرف‌کننده، تولیدکننده و حامی مالی کنار هم برای آینده‌ای سالم‌تر تلاش می‌کنن.
+                                <br>
+                                ما هنوز اول راهیم، اما راهمون روشنه—با پشتکار، صداقت، و تعهد به طبیعت. اگر دنبال محصولی سالم، واقعی و با پشتوانه‌ی ارگانیک هستی، ما اینجاییم—با افتخار، از دل زمین ایران.
                             </p>
                         </div>
                     </div>
@@ -45,7 +57,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-image">
-                        <img src="/Front/img/about/about-2.jpg" alt="image">
+                        <img src="{{asset('images/Front/AboutUs.jpg')}}" alt="image">
                     </div>
                 </div>
 
@@ -54,37 +66,36 @@
 
                         <div class="about-item">
                             <div class="about-slide-image">
-                                <img src="/Front/img/about/1.png" alt="image">
+                                <img src="{{asset('images/Front/SheepMeat.jpeg')}}" class="aboutus-image-size" alt="image">
                             </div>
                             <div class="about-text">
                                 <span>گوشت گوسفند پرواری
 </span>
                                 <h3>
-                                    از دامداری تمیز و کنترل‌شده، با تغذیه طبیعی
-
+                                    از دامداری تمیز و کنترل‌شده، با تغذیه سالم دام‌ها بدون افزودنی.
                                 </h3>
                             </div>
                         </div>
 
                         <div class="about-item">
                             <div class="about-slide-image">
-                                <img src="/Front/img/about/2.png" alt="image">
+                                <img src="{{asset('images/Front/Eggs.jpeg')}}" class="aboutus-image-size" alt="image">
                             </div>
                             <div class="about-text">
                                 <span>تخم‌مرغ رسمی محلی
 </span>
-                                <h3>تخم‌مرغ سالم از مرغ‌های خوشحال و آزاد
+                                <h3>تخم‌مرغ سالم از مرغ‌های محلی و آزاد
                                 </h3>
                             </div>
                         </div>
 
                         <div class="about-item">
                             <div class="about-slide-image">
-                                <img src="/Front/img/about/3.png" alt="image">
+                                <img src="{{asset('images/Front/DryFruit.jpeg')}}" class="aboutus-image-size" alt="image">
                             </div>
                             <div class="about-text">
                                 <span>میوه خشک</span>
-                                <h3>خشک‌شده با دستگاه صنعتی، طعم و ماندگاری بالا
+                                <h3>میوه های ارگانیک و باکیفیت ، خشک‌شده با دستگاه صنعتی
                                 </h3>
                             </div>
                         </div>
@@ -130,116 +141,10 @@
     <!-- End About Section -->
 
 
-    <!-- Start Country Area -->
-    <section class="country-area pb-100">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="country-item">
-                        <div class="country-content">
-                            <span>مناطق تحت پوشش</span>
-                            <h3>نقاط فروش و تحویل</h3>
-                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                        </div>
-                        <h3>مساحت موجود</h3>
-                        <ul class="country-list">
-                            <li>
-                                <i class="flaticon-plus"></i>
-                                اروپا (379)
-                            </li>
-                            <li>
-                                <i class="flaticon-plus"></i>
-                                استرالیا (10)
-                            </li>
-                            <li>
-                                <i class="flaticon-plus"></i>
-                                آمریکا (7)
-                            </li>
-                            <li>
-                                <i class="flaticon-plus"></i>
-                                آرژانتین (50)
-                            </li>
-                            <li>
-                                <i class="flaticon-plus"></i>
-                                روسیه (4)
-                            </li>
-                            <li>
-                                <i class="flaticon-plus"></i>
-                                مکزیک (10)
-                            </li>
-                        </ul>
-
-                        <div class="country-btn">
-                            <a href="#" class="default-btn">
-                                مشاهده همه
-                                <i class="flaticon-plus"></i>
-                                <span></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class=map-img>
-                        <img src="{{asset('Front/img/map.png')}}" alt=map>
-
-                        <div class="location">
-                            <a href="#">
-                                <div class=location-info>
-                                    <h5>استرالیا</h5>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="location location2">
-                            <a href="#">
-                                <div class=location-info>
-                                    <h5>اروپا</h5>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="location location3">
-                            <a href="#">
-                                <div class=location-info>
-                                    <h5>روسیه</h5>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="location location4">
-                            <a href="#">
-                                <div class=location-info>
-                                    <h5>آمریکا</h5>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="location location5">
-                            <a href="#">
-                                <div class=location-info>
-                                    <h5>آرژانتین</h5>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="location location6">
-                            <a href="#">
-                                <div class=location-info>
-                                    <h5>مکزیک</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Country Area -->
 
 
     <!-- Start Harvesting Section -->
-    <section class="harvesting-section pt-100">
+    <section class="harvesting-section ptb-100">
         <div class="container">
             <div class="harvesting-title">
                 <span>دسته بندی محصولات</span>
@@ -250,8 +155,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="harvesting-item">
                         <div class="harvesting-image">
-                            <img src="/Front/img/harvesting/1.png" alt="image">
-                            <img src="/Front/img/harvesting/white-1.png" alt="image">
+                            <img src="{{asset('images/Front/icons/Sheep.png')}}" style="width: 86%" alt="image">
+                            <img src="{{asset('images/Front/icons/Sheep.png')}}" style="width: 86%" alt="image">
                         </div>
 
                         <div class="harvesting-content">
@@ -264,8 +169,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="harvesting-item">
                         <div class="harvesting-image">
-                            <img src="/Front/img/harvesting/2.png" alt="image">
-                            <img src="/Front/img/harvesting/white-2.png" alt="image">
+                            <img src="{{asset('images/Front/icons/Chicken.png')}}" style="width: 75%" alt="image">
+                            <img src="{{asset('images/Front/icons/Chicken.png')}}" style="width: 75%" alt="image">
                         </div>
 
                         <div class="harvesting-content">
@@ -278,8 +183,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-md-3 offset-sm-3 offset-lg-0">
                     <div class="harvesting-item">
                         <div class="harvesting-image">
-                            <img src="/Front/img/harvesting/3.png" alt="image">
-                            <img src="/Front/img/harvesting/white-3.png" alt="image">
+                            <img src="{{asset('images/Front/icons/DryFruit.png')}}" style="width: 64%" alt="image">
+                            <img src="{{asset('images/Front/icons/DryFruit.png')}}" style="width: 64%" alt="image">
                         </div>
 
                         <div class="harvesting-content">
@@ -294,7 +199,7 @@
 
 
     <!-- Start Subscribe Area -->
-    <section class="subscribe-area ptb-100">
+    <section class="subscribe-area pt-100 pb-100">
         <div class="container">
             <div class="section-title">
                 <h3>عضویت در خبرنامه </h3>

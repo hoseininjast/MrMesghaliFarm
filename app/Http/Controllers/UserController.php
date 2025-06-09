@@ -23,24 +23,20 @@ class UserController extends Controller
     public function Create(Request $request)
     {
         $request->validate([
-            'name' => 'required|string',
-            'Username' => 'required|string|unique:users',
+            'FirstName' => 'required|string',
+            'LastName' => 'required|string',
             'email' => 'required|email|unique:users',
-            'Role' => 'required|string|in:Admin,Supervisor,User',
-            'AdminID' => 'required|integer|exists:users,id',
             'password' => 'required|string',
-            'WalletAddress' => 'nullable|string|regex:/^(0x)?(?i:[0-9a-f]){40}$/',
+            'Role' => 'required|string|in:Admin,User',
         ]);
 
         User::create([
-            'name' => $request->name,
-            'Username' => $request->Username,
+            'FirstName' => $request->FirstName,
+            'LastName' => $request->LastName,
             'email' => $request->email,
-            'Role' => $request->Role,
-            'AdminID' => $request->AdminID,
             'password' => \Hash::make($request->password),
-            'WalletAddress' => $request->WalletAddress,
-            'Image' => 'https://platotournament.ai1polaris.com/images/Users/DefaultProfile.png',
+            'Role' => $request->Role,
+            'Charge' => 0
         ]);
 
         Alert::success('User created successfully');
@@ -105,4 +101,5 @@ class UserController extends Controller
 
         return redirect()->route('Dashboard.Profile.Setting');
     }
+
 }

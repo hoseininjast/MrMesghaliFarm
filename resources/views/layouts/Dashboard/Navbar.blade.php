@@ -36,6 +36,26 @@
 
                 @if(Auth::user()->Role == 'Owner')
 
+
+                    <li>
+                        <a href="#Contracts" data-bs-toggle="collapse">
+                            <i class="mdi mdi-list-status"></i>
+                            <span>  Contracts </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="Contracts">
+                            <ul class="nav-second-level">
+                                <li>
+                                    <a href="{{route('Dashboard.Contracts.index')}}">All</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('Dashboard.Contracts.Add')}}">Add</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
                     <li>
                         <a href="#Users" data-bs-toggle="collapse">
                             <i class="mdi mdi-account-multiple"></i>

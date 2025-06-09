@@ -1,3 +1,179 @@
 .Slider_1{
     background-image: url(../../images/Sliders/1.jpg)
 }
+
+.badge-darkyellow{
+    display: inline-block;
+    padding: .35em .65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 50rem !important;
+    background-color: #f8c32c !important;
+}
+.aboutus-image-size{
+    width: 258px;
+    height: 198px;
+}
+.shop-image-size{
+    width: 259px;
+    height: 243px;
+}
+
+.default-btn {
+    background-color: #0d401c !important;
+}
+.single-footer-widget .newsletter-form button {
+    background-color: #ffffff !important;
+    color: #072010;
+}
+
+
+.default-btn > i , .single-footer-widget .newsletter-form button > i , .newsletter-form button i{
+    color: #f8c32c !important;
+}
+
+.about-content-area .about-list i , .fisherman-content .fisherman-list i , .cowman-content .cowman-list i{
+    background-color: #0d401c !important;
+    color: #f8c32c !important;
+    border: 1px solid #f8c32c;
+}
+
+.single-footer-widget .footer-social a{
+    background-color: #f8c32c;
+    color: #0d411d;
+}
+
+.newsletter-form button{
+    background-color: #0d401c !important;
+
+}
+.single-footer-widget .footer-info-contact h3 , .single-footer-widget .footer-info-contact i{
+    color: #f8c32c !important;
+}
+.single-footer-widget .footer-info-contact span a{
+    color: #ffffff;
+}
+.footer-section{
+    background-color: #0d411d;
+}
+.single-footer-widget .footer-heading h3 , .single-footer-widget p ,.single-footer-widget .footer-quick-links li a,.single-footer-widget .footer-info-contact span , .copyright-area .copyright-area-content p , .copyright-area .copyright-area-content ul li a , .copyright-area .copyright-area-content p a{
+    color: #ffffff;
+}
+
+.single-footer-widget .newsletter-form .input-newsletter{
+    background-color: #3d6649;
+    color: #ffffff;
+}
+.single-footer-widget .newsletter-form .input-newsletter::placeholder {
+    color: #ffffff;
+
+}
+
+.footer-image{
+    top: -117px;
+    position: relative;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .footer-image{
+        top: -63px;
+        position: relative;
+    }
+}
+
+.go-top{
+    color: #0d421e;
+    background-color: #f8c32c;
+}
+
+.shop-list-tab .tab_content .tabs_item .shop-item .shop-content .shop-btn .shop-btn-one{
+    background-color: #0d401c !important;
+    color: #ffffff;
+}
+.harvesting-item{
+    background-color: #52320a;
+}
+.harvesting-item .harvesting-content h3{
+    color: #f8c32c !important;
+}
+
+.harvesting-item::before{
+    background-color: #0d401c !important;
+
+}
+.shop-list-tab .tab_content .tabs_item .shop-item::before{
+    background-color: #f8c32c;
+}
+
+.shop-list-tab .tab_content .tabs_item .shop-item .shop-content .shop-btn .shop-btn-one i{
+    color: #f8c32c !important;
+
+}
+.services-content-area .services-slider .services-item .icon i{
+    color: #f8c32c !important;
+
+}
+.services-content-area .services-slider .services-item h3{
+    color: #f8c32c !important;
+
+}
+.services-content-area .services-slider.owl-carousel .owl-stage-outer .owl-stage{
+    border-bottom: 1px dashed #f8c32c;
+}
+
+.services-section{
+    background-color: #0d401c !important;
+
+}
+
+.services-content-area .services-slider .services-item h3::before{
+    background-color: #f8c32c !important;
+
+}
+.text-darkyellow{
+    color: #f8c32c !important;
+}
+.bg-darkyellow{
+    background-color: #f8c32c;
+}
+.border-lightgreen{
+    border: 2px dotted #18b747;
+}
+.icon-images-size{
+    width: 40px !important;
+}
+.icon-sheep-size{
+    padding: 1rem 0.8rem 1rem 0.8rem !important;
+}
+
+.single-contact-box i{
+    color: #f8c32c !important;
+
+}
+.page-title-content ul li::before{
+    background-color:  #f8c32c !important;
+}
+
+.page-title-area{
+    background-image: url("../../images/Front/Header.jpg");
+}
+.single-contact-box:hover i{
+    background-color: #0d411d;
+    color: #f8c32d;
+}
+.single-contact-box{
+    background-color: #0d411d;
+}
+.single-contact-box .content-title a{
+    color: white;
+}
+.home-banner-two .home-slides .home-item .main-banner-content .banner-list i{
+    background-color: #f8c32c;
+    border: 2px dotted #18b747;
+}

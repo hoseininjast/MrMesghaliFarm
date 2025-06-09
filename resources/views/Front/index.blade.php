@@ -13,24 +13,27 @@
 
                                 <ul class="banner-list">
                                     <li>
-                                        <i class="flaticon-cow"></i>
-                                        <sup>1</sup>
+                                        <span class="badge bg-darkyellow border-lightgreen rounded-circle icon-sheep-size">
+                                            <img class="icon-images-size" style="width: 50px !important;" src="{{asset('images/Front/icons/Sheep.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>گوشت</span>
                                     </li>
                                     <li>
-                                        <i class="flaticon-"></i>
-                                        <sup>2</sup>
+                                        <span class="badge bg-darkyellow border-lightgreen rounded-circle p-3">
+                                            <img class="icon-images-size" src="{{asset('images/Front/icons/Chicken.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>تخم مرغ</span>
                                     </li>
                                     <li>
-                                        <i class="flaticon-cow-1"></i>
-                                        <sup>3</sup>
+                                       <span class="badge bg-darkyellow border-lightgreen rounded-circle p-1">
+                                            <img class="icon-images-size" style="width: 55px !important;" src="{{asset('images/Front/icons/DryFruit.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>میوه خشک</span>
                                     </li>
                                 </ul>
 
 
-                                <h1>به‌زودی محصولات خاص و سالم اینجا عرضه میشه</h1>
+                                <h1 class="text-darkyellow">به‌زودی محصولات خاص و سالم اینجا عرضه میشه</h1>
                                 <p>تازه شروع کردیم، اما بزرگ فکر می‌کنیم. منتظر بهترین محصولات باکیفیت، سالم و ارگانیک باشید.</p>
 
                                 <div class="banner-btn">
@@ -39,7 +42,7 @@
                                         <i class="flaticon-plus"></i>
                                         <span></span>
                                     </a>
-                                    <a class="optional-btn" href="{{route('Front.Collaboration')}}">
+                                    <a class="default-btn" href="{{route('Front.Collaboration')}}">
                                         همکاری ما
                                         <i class="flaticon-plus"></i>
                                     </a>
@@ -57,23 +60,26 @@
                             <div class="main-banner-content">
                                 <ul class="banner-list">
                                     <li>
-                                        <i class="flaticon-cow"></i>
-                                        <sup>1</sup>
+                                        <span class="badge bg-darkyellow border-lightgreen rounded-circle icon-sheep-size">
+                                            <img class="icon-images-size" style="width: 50px !important;" src="{{asset('images/Front/icons/Sheep.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>گوشت</span>
                                     </li>
                                     <li>
-                                        <i class="flaticon-"></i>
-                                        <sup>2</sup>
+                                        <span class="badge bg-darkyellow border-lightgreen rounded-circle p-3">
+                                            <img class="icon-images-size" src="{{asset('images/Front/icons/Chicken.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>تخم مرغ</span>
                                     </li>
                                     <li>
-                                        <i class="flaticon-cow-1"></i>
-                                        <sup>3</sup>
+                                       <span class="badge bg-darkyellow border-lightgreen rounded-circle p-1">
+                                            <img class="icon-images-size" style="width: 55px !important;" src="{{asset('images/Front/icons/DryFruit.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>میوه خشک</span>
                                     </li>
                                 </ul>
 
-                                <h1>این فقط یه سایت نیست؛ شروع یه مسیر جدیه</h1>
+                                <h1 class="text-darkyellow">این فقط یه سایت نیست؛ شروع یه مسیر جدیه</h1>
                                 <p>
                                     با قدرت از دل روستا و طبیعت شروع کردیم. اینجا قراره یه برند قابل اعتماد بسازیم.
                                 </p>
@@ -85,7 +91,7 @@
                                         <i class="flaticon-plus"></i>
                                         <span></span>
                                     </a>
-                                    <a class="optional-btn" href="{{route('Front.Collaboration')}}">
+                                    <a class="default-btn" href="{{route('Front.Collaboration')}}">
                                         همکاری ما
                                         <i class="flaticon-plus"></i>
                                     </a>
@@ -103,23 +109,26 @@
                             <div class="main-banner-content">
                                 <ul class="banner-list">
                                     <li>
-                                        <i class="flaticon-cow"></i>
-                                        <sup>1</sup>
+                                        <span class="badge bg-darkyellow border-lightgreen rounded-circle icon-sheep-size">
+                                            <img class="icon-images-size" style="width: 50px !important;" src="{{asset('images/Front/icons/Sheep.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>گوشت</span>
                                     </li>
                                     <li>
-                                        <i class="flaticon-"></i>
-                                        <sup>2</sup>
+                                        <span class="badge bg-darkyellow border-lightgreen rounded-circle p-3">
+                                            <img class="icon-images-size" src="{{asset('images/Front/icons/Chicken.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>تخم مرغ</span>
                                     </li>
                                     <li>
-                                        <i class="flaticon-cow-1"></i>
-                                        <sup>3</sup>
+                                       <span class="badge bg-darkyellow border-lightgreen rounded-circle p-1">
+                                            <img class="icon-images-size" style="width: 55px !important;" src="{{asset('images/Front/icons/DryFruit.png')}}" alt="sheep icon" />
+                                        </span>
                                         <span>میوه خشک</span>
                                     </li>
                                 </ul>
 
-                                <h1>دوست داری با ما شریک باشی؟
+                                <h1 class="text-darkyellow">دوست داری با ما شریک باشی؟
                                 </h1>
                                 <p>
                                     اگه دلت می‌خواد تو مسیر واقعی تولید، فروش و سوددهی شریک باشی، همین حالا ایمیلتو ثبت کن.
@@ -132,7 +141,7 @@
                                         <i class="flaticon-plus"></i>
                                         <span></span>
                                     </a>
-                                    <a class="optional-btn" href="{{route('Front.Collaboration')}}">
+                                    <a class="default-btn" href="{{route('Front.Collaboration')}}">
                                         همکاری ما
                                         <i class="flaticon-plus"></i>
                                     </a>
@@ -164,18 +173,24 @@
         <div class="container">
             <div class="about-title-area">
                 <div class="row">
-                    <div class="col-lg-7 col-md-12">
+                    <div class="col-lg-4 col-md-12">
                         <div class="about-title">
-                            <span>درباره ما</span>
-                            <h2>ما تازه شروع کردیم ولی راهمون مشخصه
+                            <h2>
+                                ما کی هستیم؟
+
                             </h2>
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-md-12">
+                    <div class="col-lg-8 col-md-12">
                         <div class="about-text">
                             <p>
-                                ما با دام و باغ و تلاش واقعی شروع کردیم. می‌خوایم بهترین محصولات ایران رو زیر یه برند عرضه کنیم. این فقط یه تجارت نیست، یه تعهده به خودمون و مردم.
+
+                                ما با یک باور ساده شروع کردیم: هر ایرانی شایسته‌ی مصرف محصولاتی سالم، طبیعی و با کیفیتیه که در حد بهترین‌ها باشه. همه محصولات ما—از گوشت گوسفند و تخم‌مرغ رسمی تا میوه خشک و محصولات باغی—با وسواس، عشق، و استفاده از روش‌های سالم و مسئولانه پرورش داده می‌شن.
+                                <br>
+                                ما نه‌تنها تولیدکننده‌ای متعهدیم، بلکه در مسیر گسترش کارمون، با کشاورزان و تولیدکنندگان نمونه‌ای همکاری می‌کنیم که مثل ما به سلامت، کیفیت و روش‌های طبیعی پایبند هستند.
+                                <br>
+                                این فقط یک برند نیست؛ تعهدیه به سلامت خانواده‌ها، کشاورزی پاک و آینده‌ای بهتر برای همه.
                             </p>
                         </div>
                     </div>
@@ -185,7 +200,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-image">
-                        <img src="/Front/img/about/about-2.jpg" alt="image">
+                        <img src="{{asset('images/Front/AboutUs.jpg')}}" alt="image">
                     </div>
                 </div>
 
@@ -194,37 +209,36 @@
 
                         <div class="about-item">
                             <div class="about-slide-image">
-                                <img src="/Front/img/about/1.png" alt="image">
+                                <img src="{{asset('images/Front/SheepMeat.jpeg')}}" class="aboutus-image-size" alt="image">
                             </div>
                             <div class="about-text">
                                 <span>گوشت گوسفند پرواری
 </span>
                                 <h3>
-                                    از دامداری تمیز و کنترل‌شده، با تغذیه طبیعی
-
+                                    از دامداری تمیز و کنترل‌شده، با تغذیه سالم دام‌ها بدون افزودنی.
                                 </h3>
                             </div>
                         </div>
 
                         <div class="about-item">
                             <div class="about-slide-image">
-                                <img src="/Front/img/about/2.png" alt="image">
+                                <img src="{{asset('images/Front/Eggs.jpeg')}}" class="aboutus-image-size" alt="image">
                             </div>
                             <div class="about-text">
                                 <span>تخم‌مرغ رسمی محلی
 </span>
-                                <h3>تخم‌مرغ سالم از مرغ‌های خوشحال و آزاد
+                                <h3>تخم‌مرغ سالم از مرغ‌های محلی و آزاد
                                 </h3>
                             </div>
                         </div>
 
                         <div class="about-item">
                             <div class="about-slide-image">
-                                <img src="/Front/img/about/3.png" alt="image">
+                                <img src="{{asset('images/Front/DryFruit.jpeg')}}" class="aboutus-image-size" alt="image">
                             </div>
                             <div class="about-text">
                                 <span>میوه خشک</span>
-                                <h3>خشک‌شده با دستگاه صنعتی، طعم و ماندگاری بالا
+                                <h3>میوه های ارگانیک و باکیفیت ، خشک‌شده با دستگاه صنعتی
                                 </h3>
                             </div>
                         </div>
@@ -270,7 +284,7 @@
     <!-- End About Section -->
 
     <!-- Start Harvesting Section -->
-    <section class="harvesting-section pt-100">
+    <section class="harvesting-section ptb-100">
         <div class="container">
             <div class="harvesting-title">
                 <span>دسته بندی محصولات</span>
@@ -281,8 +295,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="harvesting-item">
                         <div class="harvesting-image">
-                            <img src="/Front/img/harvesting/1.png" alt="image">
-                            <img src="/Front/img/harvesting/white-1.png" alt="image">
+                            <img src="{{asset('images/Front/icons/Sheep.png')}}" style="width: 86%" alt="image">
+                            <img src="{{asset('images/Front/icons/Sheep.png')}}" style="width: 86%" alt="image">
                         </div>
 
                         <div class="harvesting-content">
@@ -295,8 +309,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="harvesting-item">
                         <div class="harvesting-image">
-                            <img src="/Front/img/harvesting/2.png" alt="image">
-                            <img src="/Front/img/harvesting/white-2.png" alt="image">
+                            <img src="{{asset('images/Front/icons/Chicken.png')}}" style="width: 75%" alt="image">
+                            <img src="{{asset('images/Front/icons/Chicken.png')}}" style="width: 75%" alt="image">
                         </div>
 
                         <div class="harvesting-content">
@@ -309,8 +323,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-md-3 offset-sm-3 offset-lg-0">
                     <div class="harvesting-item">
                         <div class="harvesting-image">
-                            <img src="/Front/img/harvesting/3.png" alt="image">
-                            <img src="/Front/img/harvesting/white-3.png" alt="image">
+                            <img src="{{asset('images/Front/icons/DryFruit.png')}}" style="width: 64%" alt="image">
+                            <img src="{{asset('images/Front/icons/DryFruit.png')}}" style="width: 64%" alt="image">
                         </div>
 
                         <div class="harvesting-content">
@@ -342,7 +356,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="shop-item">
                                     <div class="shop-image">
-                                        <img src="/Front/img/shop/cauliflower.png" alt="image">
+                                        <img src="{{asset('images/Front/Products/SheepMeat.jpg')}}" class="shop-image-size" alt="image">
                                     </div>
 
 
@@ -364,13 +378,13 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="shop-item">
                                     <div class="shop-image">
-                                        <img src="/Front/img/shop/fish.png" alt="image">
+                                        <img src="{{asset('images/Front/Products/Eggs.png')}}" class="shop-image-size" alt="image">
                                     </div>
 
 
 
                                     <div class="shop-content">
-                                        <h3>تخم‌مرغ رسمی ۶ عددی
+                                        <h3>تخم‌مرغ رسمی ۱۰ عددی
                                         </h3>
                                         <span>به زودی</span>
 
@@ -387,13 +401,13 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="shop-item">
                                     <div class="shop-image">
-                                        <img src="/Front/img/shop/eggplant.png" alt="image">
+                                        <img src="{{asset('images/Front/Products/DryFruit.jpeg')}}" class="shop-image-size" alt="image">
                                     </div>
 
 
 
                                     <div class="shop-content">
-                                        <h3>پسته</h3>
+                                        <h3>میوه خشک بسته ای</h3>
                                         <span>به زودی</span>
 
                                         <div class="shop-btn">
@@ -409,12 +423,12 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="shop-item">
                                     <div class="shop-image">
-                                        <img src="/Front/img/shop/milk.png" alt="image">
+                                        <img src="{{asset('images/Front/Products/Almond.jpeg')}}" class="shop-image-size" alt="image">
                                     </div>
 
 
                                     <div class="shop-content">
-                                        <h3>بادام</h3>
+                                        <h3>بادام درختی خام</h3>
                                         <span>به زودی</span>
 
                                         <div class="shop-btn">
@@ -435,69 +449,7 @@
     </section>
     <!-- End Shop Section -->
 
-    <!-- Start Video Section -->
-    <div class="video-section">
-        <div class="container">
-            <div class="video-content">
-                <a href="https://www.youtube.com/watch?v=Z3OS4Bn0n-Q" class="video-btn popup-youtube">
-                    <i class="fas fa-play"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- End Video Section -->
 
-    <!-- Start Fun Facts Section -->
-    <section class="fun-facts-area pb-100">
-        <div class="container">
-            <div class="fun-facts-content-area">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-fun-fact">
-                            <h3>
-                                <span style="direction: ltr;" class="odometer" data-count="120">00</span>
-                                <span class="sign-icon">+</span>
-                            </h3>
-                            <p>گوسفند های پرواری</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-fun-fact">
-                            <h3>
-                                <span style="direction: ltr;" class="odometer" data-count="150">00</span>
-                                <span class="sign-icon">+</span>
-                            </h3>
-                            <p>تخم‌مرغ روزانه
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-fun-fact">
-                            <h3>
-                                <span style="direction: ltr;" class="odometer" data-count="145">00</span>
-                                <span class="sign-icon">+</span>
-                            </h3>
-                            <p>گوشت تولید شده
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-fun-fact">
-                            <h3>
-                                <span style="direction: ltr;" class="odometer" data-count="200">00</span>
-                                <span class="sign-icon">+</span>
-                            </h3>
-                            <p>میوه خشک شده روزانه</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Fun Facts Section -->
 
     <!-- Start Summary Section -->
     <section class="summary-section pb-100">
@@ -505,38 +457,50 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="summary-image">
-                        <img src="/Front/img/summary/1.png" alt="image">
+                        <img src="{{asset('images/Front/summery.jpg')}}" alt="image">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="summary-content">
-                        <span>خلاصه</span>
-                        <h3>ما از دل طبیعت شروع کردیم
+                        <h3>
+                            ما کیفیت صادراتی را برای سفره ایرانی می‌خواهیم
                         </h3>
-                        <p>از تمیز کردن دامداری گرفته تا لحظه دیدن اولین تخم‌مرغ محلی، هر گام در این مسیر با هدف‌گذاری دقیق و پشتکار فراوان برداشته شده است.</p>
                         <p>
-                            این فرآیند نه تنها نشان‌دهنده تعهد کامل به کیفیت است، بلکه بیانگر تلاش بی‌وقفه برای تولید محصولاتی است که سلامت و رضایت مصرف‌کننده را در اولویت قرار می‌دهند. هر روز با دقت و وسواس تمام، جزئیات مدیریت می‌شوند تا از بهداشت کامل و شرایط مطلوب برای حیوانات اطمینان حاصل شود، و این رویکرد جامع و مسئولانه است که در نهایت منجر به تولید محصولات طبیعی و باکیفیت می‌گردد.
+                            ما با نگاهی تازه به کشاورزی و دامداری قدم در مسیر تولید سالم و باکیفیت گذاشته‌ایم. هدف ما تنها فروش محصولات نیست؛ بلکه ساختن یک برند قابل اعتماد برای خانواده‌های ایرانی است که به سلامت خود اهمیت می‌دهند. در تمام مراحل، از تولید تا بسته‌بندی، با دقت و وسواس فراوان روی کیفیت، بهداشت و سلامت محصولات تمرکز کرده‌ایم. این دقت باعث شده سطح تولیدات ما در حد محصولات صادراتی باشد.
+                        </p>
+                        <p>
+                            ما باور داریم که حق مردم ایران است بهترین و سالم‌ترین مواد غذایی را مصرف کنند، نه صرفاً آنچه در بازار رایج است. به همین دلیل، تلاش کرده‌ایم بدون استفاده از ترکیبات شیمیایی یا خوراک‌های غیرطبیعی، غذایی تولید کنیم که واقعاً "طبیعی" باشد؛ چه گوشت گوسفند، چه تخم‌مرغ رسمی، چه میوه‌ خشک.
                         </p>
 
-                        <div class="summary-btn">
-                            <a class="optional-btn" href="#">
-                                همکاری با ما
+                        <p>
+                            این مسیر برای ما یک تعهد است، نه فقط یک کسب‌وکار. ما این راه را با اعتماد، پشتکار و شفافیت ادامه می‌دهیم تا بتوانیم نامی آشنا و قابل احترام در میان خانواده‌های ایرانی باشیم؛ نمادی از سلامت و صداقت.
+                        </p>
+
+                        <div class="banner-btn">
+                            <a href="#" class="default-btn">
+                                فروشگاه
+                                <i class="flaticon-plus"></i>
+                                <span></span>
+                            </a>
+                            <a class="default-btn" href="{{route('Front.Collaboration')}}">
+                                همکاری ما
                                 <i class="flaticon-plus"></i>
                             </a>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
         <div class="summary-shape-image">
-            <img src="/Front/img/summary/shape.png" alt="image">
+            <img src="{{asset('Front/img/summary/shape.png')}}" alt="image">
         </div>
     </section>
     <!-- End Summary Section -->
 
     <!-- Start Services Section -->
-    <section class="services-section pb-100">
+    <section class="services-section pb-100 pt-100">
         <div class="container">
             <div class="services-content-area">
                 <div class="services-slider owl-carousel owl-theme">
@@ -545,7 +509,7 @@
                         <div class="icon">
                             <i class="flaticon-mission-accomplished"></i>
                             <h3>
-                                <a href="single-services.html">
+                                <a class="text-white" href="single-services.html">
                                    ۱ -  تولید سالم در مزرعه
 
                                 </a>
@@ -557,7 +521,7 @@
                         <div class="icon">
                             <i class="flaticon-sushi"></i>
                             <h3>
-                                <a href="single-services.html">
+                                <a class="text-white" href="single-services.html">
                                    ۲ - برداشت و بسته‌بندی حرفه‌ای
 
                                 </a>
@@ -569,7 +533,7 @@
                         <div class="icon">
                             <i class="flaticon-shipping-and-delivery"></i>
                             <h3>
-                                <a href="single-services.html">
+                                <a class="text-white" href="single-services.html">
                                     ۳ -  حمل‌ونقل سریع و ایمن
 
                                 </a>
@@ -581,8 +545,8 @@
                         <div class="icon">
                             <i class="flaticon-vendor"></i>
                             <h3>
-                                <a href="single-services.html">
-                                  ۴ - تحویل مستقیم به خانه مصرف‌کننده
+                                <a class="text-white" href="single-services.html">
+                                  ۴ - تحویل به مصرف کننده
 
                                 </a>
                             </h3>
@@ -600,7 +564,6 @@
     <section class="cultivation-section pt-100 pb-70">
         <div class="container">
             <div class="section-title">
-                <span> دسته‌بندی فعالیت و محصولات</span>
                 <h3>خدمات و محصولات ما</h3>
             </div>
 
@@ -608,7 +571,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-cultivation">
                         <div class="cultivation-image">
-                            <img src="/Front/img/cultivation/1.png" alt="image">
+                            <img src="{{asset('images/Front/Services/Sheep.jpg')}}" alt="image">
                             <a href="#" class="details-btn">
                                 <i class="flaticon-plus"></i>
                             </a>
@@ -623,7 +586,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-cultivation">
                         <div class="cultivation-image">
-                            <img src="/Front/img/cultivation/2.png" alt="image">
+                            <img src="{{asset('images/Front/Services/Chicken.jpg')}}" alt="image">
                             <a href="#" class="details-btn">
                                 <i class="flaticon-plus"></i>
                             </a>
@@ -638,14 +601,13 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-cultivation">
                         <div class="cultivation-image">
-                            <img src="/Front/img/cultivation/3.png" alt="image">
+                            <img src="{{asset('images/Front/Services/DriedFruit.jpeg')}}" alt="image">
                             <a href="#" class="details-btn">
                                 <i class="flaticon-plus"></i>
                             </a>
                         </div>
                         <div class="cultivation-content">
-                            <h3>محصولات باغی و خشکبار
-                            </h3>
+                            <h3>میوه خشک</h3>
                         </div>
                     </div>
                 </div>
@@ -653,16 +615,19 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-cultivation">
                         <div class="cultivation-image">
-                            <img src="/Front/img/cultivation/4.png" alt="image">
+                            <img src="{{asset('images/Front/Services/Fruits.jpg')}}" alt="image">
                             <a href="#" class="details-btn">
                                 <i class="flaticon-plus"></i>
                             </a>
                         </div>
                         <div class="cultivation-content">
-                            <h3>محصولات گلخانه‌ای</h3>
+                            <h3>محصولات باغی
+                            </h3>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -709,7 +674,7 @@
                         </ul>
 
                         <div class="fisherman-btn">
-                            <a href="#" class="optional-btn">
+                            <a href="#" class="default-btn">
                                 بیشتر بدانید
                                 <i class="flaticon-plus"></i>
                             </a>
@@ -757,7 +722,7 @@
                         </ul>
 
                         <div class="cowman-btn">
-                            <a href="#" class="optional-btn">
+                            <a href="#" class="default-btn">
                                 بیشتر بدانید
                                 <i class="flaticon-plus"></i>
                             </a>

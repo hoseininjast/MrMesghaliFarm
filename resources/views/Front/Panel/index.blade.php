@@ -58,6 +58,37 @@
                </div>
 
                <div class="col-12 p-4">
+                   <h4>قرارداد ها</h4>
+                   <table class="table">
+                       <thead>
+                       <tr>
+                           <th scope="col">#</th>
+                           <th scope="col">اسم</th>
+                           <th scope="col">توضیحات</th>
+                           <th scope="col">زمان</th>
+                           <th scope="col">سود دهی</th>
+                           <th scope="col">وضعیت</th>
+                       </tr>
+                       </thead>
+                       <tbody>
+                       @foreach(\App\Models\Contracts::all() as $contract)
+                           <tr>
+                               <th scope="row">1</th>
+                               <td>{{$contract->Name}}</td>
+                               <td>{{$contract->Description}}</td>
+                               <td>{{$contract->Time}} ماه</td>
+                               <td>{{$contract->MinProfit}}% - {{$contract->MaxProfit}}%</td>
+                               <td>{{$contract->Status}}</td>
+
+                           </tr>
+                       @endforeach
+
+                       </tbody>
+                   </table>
+               </div>
+
+
+               <div class="col-12 p-4">
                    <h4>سرمایه گذاری ها</h4>
                    <table class="table">
                        <thead>

@@ -43,6 +43,30 @@ Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => '
         Route::post('Create' , [\App\Http\Controllers\UserController::class , 'Create'])->name('Create');
         Route::delete('Delete/{id}' , [\App\Http\Controllers\UserController::class , 'Delete'])->name('Delete');
 
+        Route::group( ['prefix' => 'Contracts' , 'as' => 'Contracts.' ] ,function (){
+            Route::get('index' , [\App\Http\Controllers\UserContractsController::class , 'index'])->name('index');
+            Route::get('Add' , [\App\Http\Controllers\UserContractsController::class , 'Add'])->name('Add');
+            Route::get('Edit/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'Edit'])->name('Edit');
+            Route::post('Create' , [\App\Http\Controllers\UserContractsController::class , 'Create'])->name('Create');
+            Route::put('Update/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'Update'])->name('Update');
+            Route::delete('Delete/{id}' , [\App\Http\Controllers\UserContractsController::class , 'Delete'])->name('Delete');
+
+        });
+
+
+    });
+
+
+
+
+    Route::group( ['prefix' => 'Contracts' , 'as' => 'Contracts.' ] ,function (){
+        Route::get('index/{ID}' , [\App\Http\Controllers\ContractsController::class , 'index'])->name('index');
+        Route::get('Add' , [\App\Http\Controllers\ContractsController::class , 'Add'])->name('Add');
+        Route::get('Edit/{ID}' , [\App\Http\Controllers\ContractsController::class , 'Edit'])->name('Edit');
+        Route::post('Create' , [\App\Http\Controllers\ContractsController::class , 'Create'])->name('Create');
+        Route::put('Update/{ID}' , [\App\Http\Controllers\ContractsController::class , 'Update'])->name('Update');
+        Route::delete('Delete/{id}' , [\App\Http\Controllers\ContractsController::class , 'Delete'])->name('Delete');
+
     });
 
 

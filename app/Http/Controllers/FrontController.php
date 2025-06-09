@@ -16,7 +16,7 @@ class FrontController extends Controller
 
     public function Collaboration()
     {
-        return view('Front.About');
+        return view('Front.Collaboration');
 
     }
 

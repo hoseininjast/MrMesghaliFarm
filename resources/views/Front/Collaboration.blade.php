@@ -7,10 +7,10 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-content">
-                        <h2 class="text-darkyellow">تماس با ما</h2>
+                        <h2 class="text-darkyellow">همکاری با ما</h2>
                         <ul>
                             <li><a href="{{route('Front.index')}}">خانه</a></li>
-                            <li>تماس با ما</li>
+                            <li>همکاری با ما</li>
                         </ul>
                     </div>
                 </div>
@@ -19,48 +19,56 @@
     </div>
     <!-- End Page Title Area -->
 
-    <!-- Start Contact Box Area -->
-    <section class="contact-box">
+    <!-- Start About Section -->
+    <section class="about-section pt-100">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-contact-box">
-                        <i class="fab fa-telegram-plane"></i>
-                        <div class="content-title">
-                            <h3>تلگرام</h3>
-                            <p>@alireza</p>
+            <div class="about-title-area">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 d-flex flex-column align-items-center" style="border-left: 1px solid #dfdddf;">
+                        <div class="about-title" style="border:unset">
+                            <h2>
+                                همکاری با ما
+                            </h2>
+                        </div>
+                        <div class="about-image p-2">
+                            <img src="{{asset('images/Front/Collaboration.jpg')}}" alt="image" class="rounded">
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-contact-box">
-                        <i class="fa fa-envelope"></i>
-                        <div class="content-title">
-                            <h3>ایمیل</h3>
-                            <a href="mailto:hello@trifles.com">info@mrmesghalifarm.ir</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-                    <div class="single-contact-box">
-                        <i class="fa fa-phone"></i>
-                        <div class="content-title">
-                            <h3>تلفن</h3>
-                            <a href="تلفن:021-12345678">09120000000</a>
+
+                    <div class="col-lg-7 col-md-12">
+                        <div class="about-text">
+                            <p>
+
+                                ما به دنبال ساختن یک زنجیره سالم، مردمی و ارزش‌آفرین هستیم؛ زنجیره‌ای که در آن همه—از مزرعه‌دار و دامدار تا مغازه‌دار و سرمایه‌گذار—جایگاه واقعی خود را داشته باشند.
+                                <br>
+                                اگر شما دامدار یا کشاورز هستید و با وسواس و صداقت، محصولی سالم و با کیفیت تولید می‌کنید، ما مشتاق همکاری با شما هستیم. باور داریم که سلامت غذا از مزرعه آغاز می‌شود؛ و ما آماده‌ایم محصولات شما را با همان کیفیتی که تولید کرده‌اید، به دست مصرف‌کننده نهایی برسانیم—بدون واسطه‌گری‌های رایج، با احترام کامل به تلاش شما.
+                                <br>
+                                برای مغازه‌داران، فروشگاه‌های مواد غذایی و تأمین‌کنندگان شهری نیز اینجا فرصتی ویژه وجود دارد. اگر به دنبال عرضه‌ی محصولات متفاوت، سالم و قابل‌اعتماد به مشتریانتان هستید، ما در کنارتان هستیم. ارسال منظم، بسته‌بندی حرفه‌ای، و کیفیت پایدار، بخش مهمی از تعهد ماست.
+                                <br>
+                                در نهایت، اگر سرمایه‌گذار یا علاقه‌مند به مشارکت اقتصادی هستید و به دنبال یک مسیر مطمئن، شفاف و ارزش‌محور برای سرمایه‌گذاری می‌گردید، با ما در تماس باشید. ما به دنبال رشد مشترک، سودآوری اخلاق‌مدار و ساختن آینده‌ای پایدار هستیم—نه فقط برای خودمان، بلکه برای جامعه‌ای که با ما رشد می‌کند.
+                                <br>
+                                اگر باور دارید که کیفیت، سلامت و اعتماد باید پایه‌های یک همکاری باشند، خوشحال می‌شویم از شما بشنویم.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+        </div>
+        <div class="about-shape-image">
+            <img src="/Front/img/about/about-shape.png" alt="image">
         </div>
     </section>
-    <!-- End Contact Box Area -->
+    <!-- End About Section -->
+
 
     <!-- Start Contact Area -->
     <section class="contact-area pb-100">
         <div class="container">
             <div class="section-title">
-                <h3>برای هر سوالی پیام بفرستید</h3>
-                <p>انتقادات و پیشنهادات خود را با ما در میان بگذارید.</p>
+                <h3>برای همکاری با ما پیام بفرستید</h3>
+                <p>لطفا پیشناهاد کامل خود را همراه با اطلاعات تماس و مشخصات کسب و کار خود را ارسال کنید.</p>
             </div>
 
             <div class="row">
@@ -122,23 +130,7 @@
     </section>
     <!-- End Contact Area -->
 
-    <!-- Start Subscribe Area -->
-    <section class="subscribe-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <h3>عضویت در خبرنامه  </h3>
-                <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-            </div>
 
-            <form class="newsletter-form">
-                <input type="email" class="input-newsletter" placeholder="ایمیل خود را وارد کنید" name="EMAIL" required autocomplete="off">
-                <button type="submit">
-                    مشترک شدن
-                    <i class="flaticon-plus"></i>
-                </button>
-                <div id="validator-newsletter" class="form-result"></div>
-            </form>
-        </div>
-    </section>
-    <!-- End Subscribe Area -->
+
+
 @endsection

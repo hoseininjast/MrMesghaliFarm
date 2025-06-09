@@ -54,6 +54,14 @@
 
                     <div class="others-options">
 
+
+                        <div class="cart-btn">
+                            <a href="{{route('Front.Panel.index')}}">
+                                <i class="fa-solid fa-arrow-right-to-bracket text-white"></i>
+                            </a>
+                        </div>
+
+
                         <div class="cart-btn">
                             <a href="cart.html">
                                 <i class="fa fa-shopping-cart"></i>
