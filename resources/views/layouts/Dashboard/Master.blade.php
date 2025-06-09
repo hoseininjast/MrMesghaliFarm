@@ -10,7 +10,7 @@
     <meta content="Ai1Polaris" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('images/MainLogo.png')}}">
+    <link rel="shortcut icon" href="{{asset('images/Logo.png')}}">
 
     <!-- Wappalyzer Technology -->
     <script charset="utf-8" src="https://cdn-client.medium.com/lite/static/js/tracing.075b133f.chunk.js"></script>
@@ -23,6 +23,8 @@
     <link href="{{asset('Dashboard/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    @laravelPWA
 
 
 
