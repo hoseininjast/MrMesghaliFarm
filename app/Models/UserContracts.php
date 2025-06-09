@@ -23,7 +23,7 @@ class UserContracts extends Model
 
     public function User()
     {
-        return $this->belongsTo(User::class, 'UserID' , '');
+        return $this->belongsTo(User::class, 'UserID' , 'id');
     }
 
 }

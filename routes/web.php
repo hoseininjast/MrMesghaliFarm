@@ -44,7 +44,7 @@ Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => [
         Route::delete('Delete/{id}' , [\App\Http\Controllers\UserController::class , 'Delete'])->name('Delete');
 
         Route::group( ['prefix' => 'Contracts' , 'as' => 'Contracts.' ] ,function (){
-            Route::get('index' , [\App\Http\Controllers\UserContractsController::class , 'index'])->name('index');
+            Route::get('index/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'index'])->name('index');
             Route::get('Add' , [\App\Http\Controllers\UserContractsController::class , 'Add'])->name('Add');
             Route::get('Edit/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'Edit'])->name('Edit');
             Route::post('Create' , [\App\Http\Controllers\UserContractsController::class , 'Create'])->name('Create');
@@ -60,7 +60,7 @@ Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => [
 
 
     Route::group( ['prefix' => 'Contracts' , 'as' => 'Contracts.' ] ,function (){
-        Route::get('index/{ID}' , [\App\Http\Controllers\ContractsController::class , 'index'])->name('index');
+        Route::get('index' , [\App\Http\Controllers\ContractsController::class , 'index'])->name('index');
         Route::get('Add' , [\App\Http\Controllers\ContractsController::class , 'Add'])->name('Add');
         Route::get('Edit/{ID}' , [\App\Http\Controllers\ContractsController::class , 'Edit'])->name('Edit');
         Route::post('Create' , [\App\Http\Controllers\ContractsController::class , 'Create'])->name('Create');
