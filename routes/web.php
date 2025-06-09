@@ -23,7 +23,7 @@ Route::group([ 'as' => 'Front.' ] , function (){
     Route::get('Collaboration' , [\App\Http\Controllers\FrontController::class , 'Collaboration'])->name('Collaboration');
     Route::get('Contact' , [\App\Http\Controllers\FrontController::class , 'Contact'])->name('Contact');
 
-    Route::group( ['prefix' => 'Panel' , 'as' => 'Panel.' , 'middleware' => ['auth' ] ] ,function (){
+    Route::group( ['prefix' => 'Panel' , 'as' => 'Panel.' , 'middleware' => ['auth' , 'isOwner'] ] ,function (){
         Route::get('index' , [\App\Http\Controllers\PanelController::class , 'index'])->name('index');
         Route::get('Report/{ID}' , [\App\Http\Controllers\PanelController::class , 'Report'])->name('Report');
         Route::get('DownloadSampleContract' , [\App\Http\Controllers\PanelController::class , 'DownloadSampleContract'])->name('DownloadSampleContract');
