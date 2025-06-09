@@ -30,14 +30,26 @@
 
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <form method="POST" action="{{route('Dashboard.Users.Create')}}" enctype="multipart/form-data">
+                                        <form method="POST" action="{{route('Dashboard.Users.Contracts.Create')}}" enctype="multipart/form-data">
                                             @csrf
+                                            <input type="hidden" name="UserID" value="{{$UserID}}">
 
                                             <div class="row">
                                                 <div class="mb-3 col-6">
                                                     <label for="Amount" class="form-label">Amount</label>
                                                     <input type="number" id="Amount" name="Amount" class="form-control" >
                                                 </div>
+
+                                                <div class="mb-3 col-4">
+                                                    <label for="SignedContract" class="form-label">Signed Contract</label>
+                                                    <input type="file" id="SignedContract" name="SignedContract" accept="application/pdf" class="form-control">
+
+                                                </div>
+
+
+
+
+
                                             </div>
                                             <div class="row">
                                                 <div class="mb-3 col-6">
@@ -49,7 +61,7 @@
                                                     <label for="ContractID"  class="form-label">Contract</label>
                                                     <select class="form-select" id="ContractID" name="ContractID">
                                                         <option selected>Select User Contract</option>
-                                                        @foreach(\App\Models\Contracts::all() as $contract)
+                                                        @foreach($Contracts as $contract)
                                                             <option value="{{$contract->id}}">{{$contract->Name}}</option>
                                                         @endforeach
 

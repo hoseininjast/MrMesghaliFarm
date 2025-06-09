@@ -27,6 +27,7 @@ class UserController extends Controller
             'LastName' => 'required|string',
             'email' => 'required|email|unique:users',
             'password' => 'required|string',
+            'CartNumber' => 'nullable|numeric',
             'Role' => 'required|string|in:Admin,User',
         ]);
 
@@ -36,7 +37,8 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => \Hash::make($request->password),
             'Role' => $request->Role,
-            'Charge' => 0
+            'Charge' => 0,
+            'CartNumber' => $request->CartNumber,
         ]);
 
         Alert::success('User created successfully');

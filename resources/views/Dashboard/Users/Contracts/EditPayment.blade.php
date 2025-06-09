@@ -1,4 +1,7 @@
 @extends('layouts.Dashboard.Master')
+@section('Head')
+    <link href="{{asset('Dashboard/assets/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
+@endsection
 @section('content')
     <div class="content-page">
         <div class="content">
@@ -10,7 +13,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Add User</h4>
+                                <h4 class="header-title">Edit payment</h4>
 
 
                                 @if ($errors->any())
@@ -27,57 +30,54 @@
 
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <form method="POST" action="{{route('Dashboard.Users.Create')}}" enctype="multipart/form-data">
+                                        <form method="POST" action="{{route('Dashboard.Users.Contracts.UpdatePayment' , $Payment->id)}}" enctype="multipart/form-data">
                                             @csrf
+                                            @method('PUT')
+
                                             <div class="row">
                                                 <div class="mb-3 col-6">
-                                                    <label for="FirstName" class="form-label">First Name</label>
-                                                    <input type="text" id="FirstName" name="FirstName" class="form-control" required>
+                                                    <label for="PaymentDate" class="form-label">Payment Date</label>
+                                                    <input type="text" id="PaymentDate" name="PaymentDate" class="form-control" required value="{{$Payment->PaymentDate}}">
+
                                                 </div>
 
                                                 <div class="mb-3 col-6">
-                                                    <label for="LastName" class="form-label">Last Name</label>
-                                                    <input type="text" id="LastName" name="LastName" class="form-control" required>
+                                                    <label for="Amount" class="form-label">Amount</label>
+                                                    <input type="number" id="Amount" name="Amount" class="form-control" required value="{{$Payment->Amount}}">
                                                 </div>
-
-
-
                                             </div>
-
                                             <div class="row">
                                                 <div class="mb-3 col-6">
-                                                    <label for="email" class="form-label">Email</label>
-                                                    <input type="email" id="email" name="email" class="form-control" required>
+                                                    <label for="Percent" class="form-label">Percent</label>
+                                                    <input type="text" id="Percent" name="Percent" step="0.1" class="form-control" required value="{{$Payment->Percent}}" >
                                                 </div>
 
-
                                                 <div class="mb-3 col-6">
-                                                    <label for="Role"  class="form-label">Role</label>
-                                                    <select class="form-select" id="Role" name="Role">
-                                                        <option selected>Select User Role</option>
-                                                        <option value="Admin">Admin</option>
-                                                        <option value="User">User</option>
+                                                    <label for="Status"  class="form-label">Status</label>
+                                                    <select class="form-select" id="Status" name="Status" required>
+                                                        <option selected disabled>Select Payment Status </option>
+                                                        <option value="Pending" @if($Payment->Status == 'Pending') selected @endif>Pending</option>
+                                                        <option value="Paid" @if($Payment->Status == 'Paid') selected @endif>Paid</option>
+
                                                     </select>
                                                 </div>
 
                                             </div>
 
 
-
                                             <div class="row">
                                                 <div class="mb-3 col-6">
-                                                    <label for="password" class="form-label">Password</label>
-                                                    <small class="cursor-pointer" onclick="GeneratePassword()">generate</small>
-                                                    <input type="text" id="password" name="password" class="form-control" required>
+                                                    <label for="VerificationNumber" class="form-label">Verification Number</label>
+                                                    <input type="text" id="VerificationNumber" name="VerificationNumber" class="form-control" required value="{{$Payment->VerificationNumber}}">
                                                 </div>
-
 
                                                 <div class="mb-3 col-6">
-                                                    <label for="CartNumber" class="form-label">Cart Number</label>
-                                                    <input type="text" id="CartNumber" name="CartNumber" class="form-control" required>
+                                                    <label for="ReferenceNumber" class="form-label">Reference Number</label>
+                                                    <input type="text" id="ReferenceNumber" name="ReferenceNumber" class="form-control" required value="{{$Payment->ReferenceNumber}}">
                                                 </div>
-
                                             </div>
+
+
 
 
 
@@ -110,16 +110,11 @@
 @endsection
 
 @section('js')
+    <script src="{{asset('Dashboard/assets/libs/flatpickr/flatpickr.min.js')}}"></script>
     <script>
-        function GeneratePassword(){
-            var length = 12,
-                charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*-_=+;:~",
-                pass = "";
-            for (var i = 0, n = charset.length; i < length; ++i) {
-                pass += charset.charAt(Math.floor(Math.random() * n));
-            }
-            $('#password').val(pass);
+        $(document).ready(function() {
+            $("#PaymentDate").flatpickr({enableTime:!0,dateFormat:"Y-m-d H:i:ss",minDate: "today"});
+        });
 
-        }
     </script>
 @endsection

@@ -30,7 +30,7 @@
                                <i class="fa fa-percentage"></i>
                                <div class="content-title">
                                    <h3>سود</h3>
-                                   <p>۲۰٪</p>
+                                   <p class="text-white">۲۰٪</p>
                                </div>
                            </div>
                        </div>
@@ -39,7 +39,7 @@
                                <i class="fa fa-calendar"></i>
                                <div class="content-title">
                                    <h3>سررسید برداشت</h3>
-                                   <p>۲۳/۱۰/۱۴۰۴</p>
+                                   <p class="text-white">۲۳/۱۰/۱۴۰۴</p>
                                </div>
                            </div>
                        </div>
@@ -48,7 +48,7 @@
                                <i class="fa fa-dollar-sign"></i>
                                <div class="content-title">
                                    <h3>مبلغ سود</h3>
-                                   <p>۲۰۰ دلار</p>
+                                   <p class="text-white">۲۰۰ دلار</p>
                                </div>
                            </div>
                        </div>
@@ -58,7 +58,14 @@
                </div>
 
                <div class="col-12 p-4">
-                   <h4>قرارداد ها</h4>
+                   <div class="row">
+                       <div class="col-9">
+                           <h4>قرارداد ها</h4>
+                       </div>
+                       <div class="col-3">
+                           <a href="{{route('Front.Panel.DownloadSampleContract')}}" class="btn btn-success">دانلود نمونه قرارداد <i class="fa fa-download"></i></a>
+                       </div>
+                   </div>
                    <table class="table">
                        <thead>
                        <tr>
@@ -75,7 +82,7 @@
                            <tr>
                                <th scope="row">1</th>
                                <td>{{$contract->Name}}</td>
-                               <td>{{$contract->Description}}</td>
+                               <td class="Panel-table-Description">{{$contract->Description}}</td>
                                <td>{{$contract->Time}} ماه</td>
                                <td>{{$contract->MinProfit}}% - {{$contract->MaxProfit}}%</td>
                                <td>{{$contract->Status}}</td>
@@ -95,44 +102,26 @@
                        <tr>
                            <th scope="col">#</th>
                            <th scope="col">مبلغ</th>
-                           <th scope="col">سررسید سود</th>
+                           <th scope="col">شروع قرارداد</th>
                            <th scope="col">پایان قرارداد</th>
                            <th scope="col">عملیات</th>
                        </tr>
                        </thead>
                        <tbody>
-                       <tr>
-                           <th scope="row">1</th>
-                           <td>1000 دلار</td>
-                           <td>۲۳/۱۰/۱۴۰۴</td>
-                           <td>۲۵/۰۱/۱۴۰۵</td>
-                           <td>
-                               <a class="btn btn-primary">گزارش</a>
-                               <a class="btn btn-primary">دانلود قرارداد</a>
-                           </td>
-                       </tr>
-                       <tr>
-                           <th scope="row">1</th>
-                           <td>1000 دلار</td>
-                           <td>۲۳/۱۰/۱۴۰۴</td>
-                           <td>۲۵/۰۱/۱۴۰۵</td>
-                           <td>
-                               <a class="btn btn-primary">گزارش</a>
-                               <a class="btn btn-primary">دانلود قرارداد</a>
+                       @foreach($Contracts as $contract)
+                           <tr>
+                               <th scope="row">{{$loop->iteration}}</th>
+                               <td>{{number_format($contract->Amount)}} میلیون</td>
+                               <td>{{\Morilog\Jalali\CalendarUtils::strftime('Y/m/d', $contract->StartDate)}}</td>
+                               <td>{{\Morilog\Jalali\CalendarUtils::strftime('Y/m/d', $contract->EndDate)}}</td>
+                               <td>
+                                   <a href="{{route('Front.Panel.Report' , $contract->id)}}" class="btn btn-primary">گزارش</a>
+                                   <a href="{{$contract->SignedContract}}" download class="btn btn-primary">دانلود قرارداد</a>
+                               </td>
+                           </tr>
+                       @endforeach
 
-                           </td>
-                       </tr>
-                       <tr>
-                           <th scope="row">1</th>
-                           <td>1000 دلار</td>
-                           <td>۲۳/۱۰/۱۴۰۴</td>
-                           <td>۲۵/۰۱/۱۴۰۵</td>
-                           <td>
-                               <a class="btn btn-primary">گزارش</a>
-                               <a class="btn btn-primary">دانلود قرارداد</a>
 
-                           </td>
-                       </tr>
                        </tbody>
                    </table>
                </div>

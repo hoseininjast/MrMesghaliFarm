@@ -80,13 +80,6 @@
 }
 
 
-@media only screen and (max-width: 767px) {
-    .footer-image{
-        top: -63px;
-        position: relative;
-    }
-}
-
 .go-top{
     color: #0d421e;
     background-color: #f8c32c;
@@ -169,6 +162,7 @@
 }
 .single-contact-box{
     background-color: #0d411d;
+    color: white;
 }
 .single-contact-box .content-title a{
     color: white;
@@ -176,4 +170,26 @@
 .home-banner-two .home-slides .home-item .main-banner-content .banner-list i{
     background-color: #f8c32c;
     border: 2px dotted #18b747;
+}
+
+.single-contact-box .content-title h3{
+    color: #f8c32d;
+}
+.Panel-table-Description{
+    width: 600px;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .footer-image{
+        top: -63px;
+        position: relative;
+    }
+
+    .Panel-table-Description{
+        width: 600px;
+    }
+
 }

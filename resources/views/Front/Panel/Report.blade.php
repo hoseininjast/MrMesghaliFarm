@@ -9,8 +9,8 @@
                     <div class="page-title-content">
                         <h2>گزارش قرارداد</h2>
                         <ul>
-                            <li><a href="index.html">خانه</a></li>
-                            <li>پنل کاربری</li>
+                            <li><a href="{{route('Front.Panel.index')}}">پنل کاربری</a></li>
+                            <li>گزارش قرارداد</li>
                         </ul>
                     </div>
                 </div>
@@ -53,62 +53,45 @@
 
 
                <div class="col-12 p-4">
-                   <h4>گزارش سرمایه گذاری </h4>
+                   <h4>گزارش پرداخت ها </h4>
 
                    <table class="table">
                        <thead>
                        <tr>
                            <th scope="col">#</th>
-                           <th scope="col">درصد</th>
-                           <th scope="col">سررسید </th>
-                           <th scope="col">مبلغ</th>
+                           <th scope="col">زمان پرداخت</th>
+                           <th scope="col">مبلغ کلی</th>
+                           <th scope="col">مبلغ ماهانه</th>
+                           <th scope="col">سود کلی</th>
+                           <th scope="col">سود ماهانه</th>
+                           <th scope="col">شماره پیگیری</th>
+                           <th scope="col">شماره مرجع</th>
                            <th scope="col">وضعیت</th>
                        </tr>
                        </thead>
                        <tbody>
-                       <tr>
-                           <th scope="row">برداشت اول</th>
-                           <td>۳.۵٪</td>
-                           <td>۲۳/۱۰/۱۴۰۴</td>
-                           <td>۵۰ میلیون تومان</td>
-                           <td>
-                               <i class="fa fa-check-circle text-success"></i> دریافت شده
-                           </td>
+                       @foreach($Contract->Payments as $payment)
+                           <tr>
+                               <th scope="row">{{$loop->iteration}}</th>
+                               <td>{{\Morilog\Jalali\CalendarUtils::strftime('Y/m/d H:i', $payment->PaymentDate)}} </td>
+                               <td>{{number_format($payment->Amount) ?? 'محاسبه نشده'}}</td>
+                               <td>{{number_format($payment->Amount / 3) ?? 'محاسبه نشده'}}</td>
+                               <td>{{$payment->Percent . '%' ?? 'محاسبه نشده'}}</td>
+                               <td>{{($payment->Percent / 3) . '%' ?? 'محاسبه نشده'}}</td>
+                               <td>{{$payment->VerificationNumber}}</td>
+                               <td>{{$payment->ReferenceNumber}}</td>
+                               <td>
+                                   @if($payment->Status == 'Paid')
+                                       <i class="fa fa-check-circle text-success"></i> پرداخت شده
+                                   @else
+                                       <i class="fa fa-clock text-warning"></i> در انتظار پرداخت
+                                   @endif
+                               </td>
 
-                       </tr>
 
-                       <tr>
-                           <th scope="row">برداشت دوم</th>
-                           <td>۳٪ الی ۴٪</td>
-                           <td>۲۳/۲/۱۴۰۴</td>
-                           <td>۵۰ میلیون تومان</td>
-                           <td>
-                               <i class="fa fa-clock text-primary"></i> در انتظار پرداخت
-                           </td>
+                           </tr>
+                       @endforeach
 
-                       </tr>
-
-                       <tr>
-                           <th scope="row">برداشت سوم</th>
-                           <td>۳٪ الی ۴٪</td>
-                           <td>۲۳/۶/۱۴۰۵</td>
-                           <td>۵۰ میلیون تومان</td>
-                           <td>
-                               <i class="fa fa-clock text-primary"></i> در انتظار پرداخت
-                           </td>
-
-                       </tr>
-
-                       <tr>
-                           <th scope="row">برداشت چهارم</th>
-                           <td>۳٪ الی ۴٪</td>
-                           <td>۲۳/۹/۱۴۰۵</td>
-                           <td>۵۰ میلیون تومان</td>
-                           <td>
-                               <i class="fa fa-clock text-primary"></i> در انتظار پرداخت
-                           </td>
-
-                       </tr>
 
                        </tbody>
                    </table>

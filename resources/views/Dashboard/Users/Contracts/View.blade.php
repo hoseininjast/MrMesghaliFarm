@@ -10,35 +10,35 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Contracts</h4>
+                                <h4 class="header-title">Contract Details</h4>
 
-                                <div class=" d-flex justify-content-end mb-3">
-                                    <a class="btn btn-sm btn-success waves-effect waves-light"  href="{{route('Dashboard.Users.Contracts.Add' , $UserID)}}"  > New <i class="mdi mdi-plus"></i> </a>
-                                </div>
 
                                 <div class="table-responsive">
                                     <table class="table table-dark table-striped table-bordered text-center mb-0">
                                         <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Payment Date</th>
                                             <th>Amount</th>
-                                            <th>Time</th>
-                                            <th>Start Date</th>
-                                            <th>Profit</th>
+                                            <th>Profit Percent</th>
+                                            <th>Verification Number</th>
+                                            <th>Reference Number</th>
+                                            <th>Status</th>
                                             <th>Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($Contracts as $contract)
+                                        @foreach($Contracts->Payments as $payment)
                                             <tr>
                                                 <th scope="row">{{$loop->iteration}}</th>
-                                                <td>{{number_format($contract->Amount)}}</td>
-                                                <td>{{$contract->Contract->Time}} Months</td>
-                                                <td>{{$contract->StartDate}}</td>
-                                                <td>{{$contract->Contract->MinProfit . '% -' .$contract->Contract->MaxProfit .'%'}}</td>
+                                                <td>{{$payment->PaymentDate}} </td>
+                                                <td>{{number_format($payment->Amount ?? 0)}}</td>
+                                                <td>{{$payment->Percent}}%</td>
+                                                <td>{{$payment->VerificationNumber}}</td>
+                                                <td>{{$payment->ReferenceNumber}}</td>
+                                                <td>{{$payment->Status}}</td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-warning waves-effect waves-light" href="{{route('Dashboard.Users.Contracts.View' , $contract->id)}}"  >View <i class="mdi mdi-view-list"></i> </a>
-                                                    <a class="btn btn-sm btn-danger waves-effect waves-light" href="{{route('Dashboard.Users.Contracts.Delete' , $contract->id)}}" data-confirm-delete="true" >Delete <i class="mdi mdi-trash-can"></i> </a>
+                                                    <a class="btn btn-sm btn-warning waves-effect waves-light" href="{{route('Dashboard.Users.Contracts.EditPayment' , $payment->id)}}"  >Edit <i class="mdi mdi-pen"></i> </a>
                                                 </td>
                                             </tr>
                                         @endforeach

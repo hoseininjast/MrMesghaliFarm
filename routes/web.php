@@ -23,9 +23,10 @@ Route::group([ 'as' => 'Front.' ] , function (){
     Route::get('Collaboration' , [\App\Http\Controllers\FrontController::class , 'Collaboration'])->name('Collaboration');
     Route::get('Contact' , [\App\Http\Controllers\FrontController::class , 'Contact'])->name('Contact');
 
-    Route::group( ['prefix' => 'Panel' , 'as' => 'Panel.' ] ,function (){
+    Route::group( ['prefix' => 'Panel' , 'as' => 'Panel.' , 'middleware' => ['auth' ] ] ,function (){
         Route::get('index' , [\App\Http\Controllers\PanelController::class , 'index'])->name('index');
-        Route::get('Report' , [\App\Http\Controllers\PanelController::class , 'Report'])->name('Report');
+        Route::get('Report/{ID}' , [\App\Http\Controllers\PanelController::class , 'Report'])->name('Report');
+        Route::get('DownloadSampleContract' , [\App\Http\Controllers\PanelController::class , 'DownloadSampleContract'])->name('DownloadSampleContract');
 
     });
 
@@ -33,7 +34,7 @@ Route::group([ 'as' => 'Front.' ] , function (){
 });
 
 
-Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => ['auth'] ] , function (){
+Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => ['auth' , 'isOwner'] ] , function (){
     Route::get('/index' , [\App\Http\Controllers\DashboardController::class , 'index'])->name('index');
 
 
@@ -45,11 +46,12 @@ Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => [
 
         Route::group( ['prefix' => 'Contracts' , 'as' => 'Contracts.' ] ,function (){
             Route::get('index/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'index'])->name('index');
-            Route::get('Add' , [\App\Http\Controllers\UserContractsController::class , 'Add'])->name('Add');
-            Route::get('Edit/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'Edit'])->name('Edit');
+            Route::get('Add/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'Add'])->name('Add');
+            Route::get('View/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'View'])->name('View');
             Route::post('Create' , [\App\Http\Controllers\UserContractsController::class , 'Create'])->name('Create');
-            Route::put('Update/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'Update'])->name('Update');
             Route::delete('Delete/{id}' , [\App\Http\Controllers\UserContractsController::class , 'Delete'])->name('Delete');
+            Route::get('EditPayment/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'EditPayment'])->name('EditPayment');
+            Route::put('UpdatePayment/{ID}' , [\App\Http\Controllers\UserContractsController::class , 'UpdatePayment'])->name('UpdatePayment');
 
         });
 

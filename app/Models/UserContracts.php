@@ -14,6 +14,7 @@ class UserContracts extends Model
         'StartDate',
         'EndDate',
         'PaymentDates',
+        'SignedContract',
     ];
     use HasFactory;
 
@@ -24,6 +25,14 @@ class UserContracts extends Model
     public function User()
     {
         return $this->belongsTo(User::class, 'UserID' , 'id');
+    }
+    public function Contract()
+    {
+        return $this->hasOne(Contracts::class, 'id' , 'ContractID');
+    }
+    public function Payments()
+    {
+        return $this->hasMany(UserContractPayments::class, 'ContractID' , 'id');
     }
 
 }
