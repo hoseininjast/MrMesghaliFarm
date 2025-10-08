@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Traits\Uploader;
+use App\Models\BulkPurchase;
 use App\Models\Contracts;
 use App\Models\User;
 use App\Models\UserContractPayments;
@@ -126,6 +127,30 @@ class UserContractsController extends Controller
         Alert::success('Payment Updated Successfully');
 
         return redirect()->route('Dashboard.Users.Contracts.View' , $Payment->ContractID);
+
+
+    }
+
+
+    public function CreateOrder(Request $request)
+    {
+        $request->validate([
+            'Products' => 'required|string'
+        ]);
+
+
+
+
+        BulkPurchase::create([
+            'UserID' => \Auth::id(),
+            'Products' => $request->Products,
+            'Status' => 'Pending'
+        ]);
+
+
+        Alert::success('سفارش شما ثبت شد');
+
+        return redirect()->back();
 
 
     }

@@ -24,4 +24,9 @@ class PanelController extends Controller
         $filepath = public_path('Contract.pdf');
         return Response::download($filepath);
     }
+    public function DownloadProductsList()
+    {
+        $filepath = public_path('Products.pdf');
+        return Response::download($filepath);
+    }
 }

@@ -25,7 +25,8 @@ class UserController extends Controller
         $request->validate([
             'FirstName' => 'required|string',
             'LastName' => 'required|string',
-            'email' => 'required|email|unique:users',
+            'email' => 'nullable|email|unique:users',
+            'PhoneNumber' => 'required|numeric|unique:users',
             'password' => 'required|string',
             'CartNumber' => 'nullable|numeric',
             'Role' => 'required|string|in:Admin,User',
@@ -35,6 +36,7 @@ class UserController extends Controller
             'FirstName' => $request->FirstName,
             'LastName' => $request->LastName,
             'email' => $request->email,
+            'PhoneNumber' => $request->PhoneNumber,
             'password' => \Hash::make($request->password),
             'Role' => $request->Role,
             'Charge' => 0,

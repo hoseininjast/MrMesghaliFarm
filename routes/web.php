@@ -27,6 +27,9 @@ Route::group([ 'as' => 'Front.' ] , function (){
         Route::get('index' , [\App\Http\Controllers\PanelController::class , 'index'])->name('index');
         Route::get('Report/{ID}' , [\App\Http\Controllers\PanelController::class , 'Report'])->name('Report');
         Route::get('DownloadSampleContract' , [\App\Http\Controllers\PanelController::class , 'DownloadSampleContract'])->name('DownloadSampleContract');
+        Route::get('DownloadProductsList' , [\App\Http\Controllers\PanelController::class , 'DownloadProductsList'])->name('DownloadProductsList');
+        Route::post('CreateOrder' , [\App\Http\Controllers\UserContractsController::class , 'CreateOrder'])->name('CreateOrder');
+
 
     });
 
@@ -57,6 +60,20 @@ Route::group([ 'prefix' => 'Dashboard' ,'as' => 'Dashboard.' , 'middleware' => [
 
 
     });
+
+    Route::group( ['prefix' => 'BulkPurchase' , 'as' => 'BulkPurchase.' ] ,function (){
+        Route::get('index' , [\App\Http\Controllers\BulkPurchaseController::class , 'index'])->name('index');
+        Route::get('Edit/{ID}' , [\App\Http\Controllers\BulkPurchaseController::class , 'Edit'])->name('Edit');
+        Route::post('Update/{ID}' , [\App\Http\Controllers\BulkPurchaseController::class , 'Update'])->name('Update');
+        Route::delete('Delete/{id}' , [\App\Http\Controllers\BulkPurchaseController::class , 'Delete'])->name('Delete');
+
+        Route::get('UploadPriceList' , [\App\Http\Controllers\BulkPurchaseController::class , 'UploadPriceList'])->name('UploadPriceList');
+        Route::post('UploadPriceList' , [\App\Http\Controllers\BulkPurchaseController::class , 'UploadPriceListPost'])->name('UploadPriceListPost');
+
+
+
+    });
+
 
 
 

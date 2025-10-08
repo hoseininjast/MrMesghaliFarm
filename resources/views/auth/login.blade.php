@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="ایمیل خود را وارد کنید">
+                                <input id="PhoneNumber" type="text" class="form-control @error('PhoneNumber') is-invalid @enderror" name="PhoneNumber" value="{{ old('PhoneNumber') }}" required autocomplete="email" autofocus placeholder="شماره موبایل خود را وارد کنید">
                             </div>
                         </div>
 

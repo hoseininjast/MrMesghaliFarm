@@ -10,7 +10,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Users</h4>
+                                <h4 class="header-title">Bulk Purchase</h4>
 
                                 <div class="table-responsive">
                                     <table class="table table-dark table-striped table-bordered text-center mb-0">
@@ -18,23 +18,23 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Name</th>
-                                            <th>Email</th>
                                             <th>PhoneNumber</th>
-                                            <th>Role</th>
+                                            <th>Products</th>
+                                            <th>Time</th>
                                             <th>Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($Users as $user)
+                                        @foreach($Orders as $order)
                                             <tr>
                                                 <th scope="row">{{$loop->iteration}}</th>
-                                                <td>{{$user->FirstName . ' ' . $user->LastName}}</td>
-                                                <td>{{$user->email}}</td>
-                                                <td>{{$user->PhoneNumber}}</td>
-                                                <td>{{$user->Role}}</td>
+                                                <td>{{$order->User->FirstName .' ' . $order->User->LastName}}</td>
+                                                <td>{{$order->User->PhoneNumber}}</td>
+                                                <td>{{$order->Products}}</td>
+                                                <td>{{Verta::instance($order->created_at)->format('Y/m/d')}}</td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-primary waves-effect waves-light" href="{{route('Dashboard.Users.Contracts.index' , $user->id)}}"  >Contracts <i class="mdi mdi-clipboard-list"></i> </a>
-                                                    <a class="btn btn-sm btn-danger waves-effect waves-light" href="{{route('Dashboard.Users.Delete' , $user->id)}}" data-confirm-delete="true" >Delete <i class="mdi mdi-trash-can"></i> </a>
+                                                    <a class="btn btn-sm btn-warning waves-effect waves-light" href="{{route('Dashboard.BulkPurchase.Edit' , $order->id)}}" >Edit <i class="mdi mdi-pen"></i> </a>
+                                                    <a class="btn btn-sm btn-danger waves-effect waves-light" href="{{route('Dashboard.BulkPurchase.Delete' , $order->id)}}" data-confirm-delete="true" >Delete <i class="mdi mdi-trash-can"></i> </a>
                                                 </td>
                                             </tr>
                                         @endforeach

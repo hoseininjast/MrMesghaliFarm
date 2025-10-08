@@ -66,4 +66,19 @@ trait Uploader
 
         return 'https://mrmesghalifarm.ir/Uploads/' . $path . $filenametostore;
     }
+    public function UploadPriceList(UploadedFile $file){
+        //filename to store
+        $filenametostore = 'Products.pdf';
+
+
+
+        //Upload File
+        if(env('APP_ENV') == 'production'){
+            $file->storeAs( public_path() , $filenametostore , ['disk' => 'publichtml']);
+        }else{
+            $file->storeAs( public_path() , $filenametostore , ['disk' => 'public']);
+        }
+
+        return 'https://mrmesghalifarm.ir/Products.pdf';
+    }
 }

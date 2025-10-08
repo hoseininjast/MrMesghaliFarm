@@ -10,7 +10,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Add User</h4>
+                                <h4 class="header-title">Edit Bulk Purchase </h4>
 
 
                                 @if ($errors->any())
@@ -27,62 +27,74 @@
 
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <form method="POST" action="{{route('Dashboard.Users.Create')}}" enctype="multipart/form-data">
+                                        <form method="POST" action="{{route('Dashboard.BulkPurchase.Update' , $Order->id)}}" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="mb-3 col-6">
-                                                    <label for="FirstName" class="form-label">First Name</label>
-                                                    <input type="text" id="FirstName" name="FirstName" class="form-control" required>
+                                                    <label for="Name" class="form-label">Name</label>
+                                                    <input type="text" id="Name" name="Name" class="form-control" required readonly value="{{$Order->User->FirstName .' ' .$Order->User->LastName}}">
                                                 </div>
 
+
+
                                                 <div class="mb-3 col-6">
-                                                    <label for="LastName" class="form-label">Last Name</label>
-                                                    <input type="text" id="LastName" name="LastName" class="form-control" required>
+                                                    <label for="PhoneNumber" class="form-label">Phone Number</label>
+                                                    <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control" required readonly value="{{$Order->User->PhoneNumber}}">
                                                 </div>
 
 
 
                                             </div>
 
+
                                             <div class="row">
+                                                <div class="mb-3 col-12">
+                                                    <label for="Products" class="form-label">Products</label>
+                                                    <textarea name="Products" id="Products" class="form-control"  readonly  rows="10">{{$Order->Products}}</textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+
                                                 <div class="mb-3 col-6">
-                                                    <label for="email" class="form-label">Email</label>
-                                                    <input type="email" id="email" name="email" class="form-control" >
+                                                    <label for="Price" class="form-label">Price</label>
+                                                    <input type="number" step="0.01" id="Price" name="Price" class="form-control" required value="{{$Order->Price}}">
                                                 </div>
 
-                                                <div class="mb-3 col-6">
-                                                    <label for="PhoneNumber" class="form-label">Phone Number</label>
-                                                    <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control" required>
-                                                </div>
-
 
                                                 <div class="mb-3 col-6">
-                                                    <label for="Role"  class="form-label">Role</label>
-                                                    <select class="form-select" id="Role" name="Role">
-                                                        <option selected>Select User Role</option>
-                                                        <option value="Admin">Admin</option>
-                                                        <option value="User">User</option>
+                                                    <label for="Status"  class="form-label">Status</label>
+                                                    <select class="form-select" id="Status" name="Status">
+                                                        <option selected>Select Status </option>
+                                                        <option @if($Order->Status == 'Pending') selected @endif value="Pending">Pending</option>
+                                                        <option @if($Order->Status == 'Paid') selected @endif value="Paid">Paid</option>
+                                                        <option @if($Order->Status == 'Finished') selected @endif value="Finished">Finished</option>
+                                                        <option @if($Order->Status == 'Canceled') selected @endif value="Canceled">Canceled</option>
                                                     </select>
                                                 </div>
 
                                             </div>
 
-
-
                                             <div class="row">
                                                 <div class="mb-3 col-6">
-                                                    <label for="password" class="form-label">Password</label>
-                                                    <small class="cursor-pointer" onclick="GeneratePassword()">generate</small>
-                                                    <input type="text" id="password" name="password" class="form-control" required>
+                                                    <label for="Percentage" class="form-label">Percentage</label>
+                                                    <input type="number" step="0.01" id="Percentage" name="Percentage" class="form-control"  value="{{$Order->Percentage}}">
                                                 </div>
+
 
 
                                                 <div class="mb-3 col-6">
-                                                    <label for="CartNumber" class="form-label">Cart Number</label>
-                                                    <input type="text" id="CartNumber" name="CartNumber" class="form-control" required>
+                                                    <label for="Commission" class="form-label">Commission</label>
+                                                    <input type="number" step="0.01" id="Commission" name="Commission" class="form-control"  value="{{$Order->Commission}}">
                                                 </div>
 
+
+
                                             </div>
+
+
+
+
 
 
 
@@ -116,15 +128,6 @@
 
 @section('js')
     <script>
-        function GeneratePassword(){
-            var length = 12,
-                charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*-_=+;:~",
-                pass = "";
-            for (var i = 0, n = charset.length; i < length; ++i) {
-                pass += charset.charAt(Math.floor(Math.random() * n));
-            }
-            $('#password').val(pass);
 
-        }
     </script>
 @endsection

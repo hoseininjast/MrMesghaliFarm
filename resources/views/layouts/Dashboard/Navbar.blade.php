@@ -57,6 +57,22 @@
 
 
                     <li>
+                        <a href="{{route('Dashboard.BulkPurchase.index')}}">
+                            <i class="mdi mdi-package"></i>
+                            <span>   Bulk Purchase  </span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="{{route('Dashboard.BulkPurchase.UploadPriceList')}}">
+                            <i class="mdi mdi-upload"></i>
+                            <span>   Upload Price List  </span>
+                        </a>
+                    </li>
+
+
+                    <li>
                         <a href="#Users" data-bs-toggle="collapse">
                             <i class="mdi mdi-account-multiple"></i>
                             <span>  Users </span>
